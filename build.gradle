@@ -1,0 +1,10 @@
+subprojects {
+    repositories {
+        mavenCentral()
+    }
+
+    apply plugin: "java-platform"
+
+    group = "io.github.vrapalis.gradle.platforms"
+    version = "0.0.1"
+}

@@ -1,0 +1,5 @@
+dependencies {
+    constraints {
+        api(libs.spring.boot.gradle.plugin)
+    }
+}

@@ -1,0 +1,28 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+    }
+    includeBuild('../gradle-plugins')
+}
+
+rootProject.name = 'gradle-platforms'
+
+enableFeaturePreview("VERSION_CATALOGS")
+
+dependencyResolutionManagement {
+    repositories {
+        mavenLocal()
+    }
+
+    versionCatalogs {
+        libs {
+            /*
+            IF CATALOG WILL BE PUSHED TO REPOSITORY
+            from("io.github.vrapalis:gradle-catalogs:0.0.1")
+            */
+            from(files("../gradle-catalogs/libs.versions.toml"))
+        }
+    }
+}
+
+include(":plugin-platform", "application-platform", "test-platform")
