@@ -7,8 +7,6 @@ pluginManagement {
 
 rootProject.name = 'gradle-platforms'
 
-enableFeaturePreview("VERSION_CATALOGS")
-
 dependencyResolutionManagement {
     repositories {
         mavenLocal()
